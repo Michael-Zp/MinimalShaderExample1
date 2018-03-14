@@ -76,6 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.md" />
+    <None Include="ShaderFiles\fragment.glsl" />
+    <None Include="ShaderFiles\vertex.glsl" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="OpenTK">
