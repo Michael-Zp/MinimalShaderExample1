@@ -1,4 +1,4 @@
-﻿using OpenTK.Graphics.OpenGL4;
+﻿using OpenTK.Graphics.OpenGL;
 using Zenseless.Geometry;
 using Zenseless.HLGL;
 using Zenseless.OpenGL;
@@ -9,12 +9,12 @@ namespace Example
     {
         public MainVisual(IRenderState renderState, IContentLoader contentLoader)
         {
-            //renderState.Set(BoolState<IDepthState>.Enabled);
+            renderState.Set(BoolState<IDepthState>.Enabled);
             renderState.Set(BoolState<IBackfaceCullingState>.Enabled);
-            //texDiffuse = TextureLoader.FromBitmap(Resourcen.capsule0);
+            texDiffuse = contentLoader.Load<ITexture2D>("capsule0.jpg");
             shaderProgram = contentLoader.Load<IShaderProgram>("shader.*");
             //load geometry
-            var mesh = contentLoader.Load<DefaultMesh>("cat.obj");
+            var mesh = contentLoader.Load<DefaultMesh>("capsule.obj");
             geometry = VAOLoader.FromMesh(mesh, shaderProgram);
         }
 
@@ -23,14 +23,15 @@ namespace Example
             if (shaderProgram is null) return;
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
             shaderProgram.Activate();
-            //texDiffuse.Activate();
+            texDiffuse.Activate();
+            GL.Rotate(.5f, .5f, .5f, .5f);
             geometry.Draw();
-            //texDiffuse.Deactivate();
+            texDiffuse.Deactivate();
             shaderProgram.Deactivate();
         }
 
         private IShaderProgram shaderProgram;
         private VAO geometry;
-        //private Texture texDiffuse;
+        private ITexture2D texDiffuse;
     }
 }

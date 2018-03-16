@@ -14,7 +14,7 @@ namespace Zenseless.OpenGL
         /// <summary>
         /// Froms the array.
         /// </summary>
-        /// <typeparam name="TYPE">The type of the ype.</typeparam>
+        /// <typeparam name="TYPE">The type of the type.</typeparam>
         /// <param name="data">The data.</param>
         /// <param name="internalFormat">The internal format.</param>
         /// <param name="format">The format.</param>
