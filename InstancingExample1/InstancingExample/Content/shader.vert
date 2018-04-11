@@ -14,6 +14,6 @@ void main()
 {
 	var_color = normal;
 
-	vec3 pos = position + instancePosition + (iGlobalTime * velocity);
+	vec3 pos = position * 0.05 + instancePosition + (iGlobalTime * velocity);
 	gl_Position = vec4(pos, 1.0);
 }

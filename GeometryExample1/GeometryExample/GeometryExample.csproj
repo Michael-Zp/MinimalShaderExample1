@@ -130,32 +130,6 @@
       <Version>3.0.0-pre</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\MinimalShaderExample1\Zenseless.Base\Zenseless.Base.csproj">
-      <Project>{29307934-27ee-4581-a5dc-45b518438b6e}</Project>
-      <Name>Zenseless.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\MinimalShaderExample1\Zenseless.ContentPipeline\Zenseless.ContentPipeline.csproj">
-      <Project>{cf5501bb-e60e-43d1-a029-416e81abcd69}</Project>
-      <Name>Zenseless.ContentPipeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\MinimalShaderExample1\Zenseless.Geometry\Zenseless.Geometry.csproj">
-      <Project>{269e5407-0849-4881-bffd-e54a2485fb35}</Project>
-      <Name>Zenseless.Geometry</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\MinimalShaderExample1\Zenseless.HLGL\Zenseless.HLGL.csproj">
-      <Project>{3d197912-e10d-4eef-b23f-08c26fe0534b}</Project>
-      <Name>Zenseless.HLGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\MinimalShaderExample1\Zenseless.OpenGL\Zenseless.OpenGL.csproj">
-      <Project>{a5913ebf-7e23-45b9-8c0c-d4aa02bee97d}</Project>
-      <Name>Zenseless.OpenGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\MinimalShaderExample1\Zenseless.Sound\Zenseless.Sound.csproj">
-      <Project>{a28cde4a-148f-49f1-b8d1-279827a24142}</Project>
-      <Name>Zenseless.Sound</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

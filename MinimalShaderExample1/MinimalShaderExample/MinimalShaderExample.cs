@@ -4,6 +4,7 @@ using Zenseless.OpenGL;
 using OpenTK.Graphics.OpenGL4;
 using System;
 using System.IO;
+using Zenseless.Geometry;
 
 namespace Example
 {

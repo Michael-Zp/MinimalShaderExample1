@@ -13,7 +13,7 @@ namespace Example
         {
             renderState.Set(BoolState<IDepthState>.Enabled);
             shaderProgram = contentLoader.Load<IShaderProgram>("shader.*");
-            var mesh = Meshes.CreateIcosahedron(0.03f);
+            var mesh = contentLoader.Load<DefaultMesh>("suzanne.obj");
             geometry = VAOLoader.FromMesh(mesh, shaderProgram);
 
             //per instance attributes
@@ -24,7 +24,7 @@ namespace Example
             var velocities = new Vector3[instanceCount];
             for (int i = 0; i < instanceCount; ++i)
             {
-                instancePositions[i] = new Vector3(RndCoord(), RndCoord(), RndCoord() + 1.0f);
+                instancePositions[i] = new Vector3(RndCoord(), RndCoord(), RndCoord() + 1);
                 velocities[i] = new Vector3(RndCoord(), RndCoord(), 0.0f).Normalized() * Rnd01();
             }
             geometry.SetAttribute(shaderProgram.GetResourceLocation(ShaderResourceType.Attribute, "instancePosition"), instancePositions, VertexAttribPointerType.Float, 3, true);
