@@ -12,7 +12,7 @@ namespace Example
         {
             var window = new ExampleWindow();
             window.SetContentSearchDirectory(Path.GetDirectoryName(PathTools.GetSourceFilePath())); //would be faster if you only specify a subdirectory
-            var visual = new MainVisual(window.RenderContext.RenderState, window.ContentLoader);
+            var visual = new MainVisualHeightField(window.RenderContext.RenderState, window.ContentLoader);
             window.Render += visual.Render;
             window.Run();
         }

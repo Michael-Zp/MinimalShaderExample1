@@ -16,6 +16,7 @@ namespace Example
             //load geometry
             var mesh = contentLoader.Load<DefaultMesh>("capsule.obj");
             geometry = VAOLoader.FromMesh(mesh, shaderProgram);
+            
         }
 
         public void Render()
