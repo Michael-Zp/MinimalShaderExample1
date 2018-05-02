@@ -12,9 +12,8 @@ namespace Example
         {
             var window = new ExampleWindow();
             window.SetContentSearchDirectory(Path.GetDirectoryName(PathTools.GetSourceFilePath())); //would be faster if you only specify a subdirectory
-            var visual = new MainVisual(window.RenderContext.RenderState, window.ContentLoader);
-            var time = new GameTime();
-            window.Render += () => visual.Render(time.AbsoluteTime);
+            var visual = new MainVisual(window.ContentLoader);
+            window.Render += visual.Render;
             window.Run();
         }
     }
