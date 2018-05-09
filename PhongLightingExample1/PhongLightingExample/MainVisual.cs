@@ -40,15 +40,15 @@ namespace Example
             if (shaderProgram is null) return;
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
             shaderProgram.Activate();
-            shaderProgram.Uniform("light1DirectionWorld", Vector3.Normalize(new Vector3(-1, -1, 1)));
+            shaderProgram.Uniform("light1DirectionWorld", Vector3.Normalize(new Vector3(0, 1, 0)));
             shaderProgram.Uniform("light1Color", new Vector4(1f, 0f, 0f, 1f));
-            shaderProgram.Uniform("light2Position", new Vector3(1, 1, 1));
+            shaderProgram.Uniform("light2Position", new Vector3(2, 1, 1));
             shaderProgram.Uniform("light2Color", new Vector4(1f, 1f, 1f, 1f));
             shaderProgram.Uniform("light3Position", new Vector3(-2, 2, 2));
             shaderProgram.Uniform("light3Direction", Vector3.Normalize(new Vector3(1, -1, -1)));
             shaderProgram.Uniform("light3Angle", MathHelper.DegreesToRadians(10f));
             shaderProgram.Uniform("light3Color", new Vector4(0, 0, 1f, 1f));
-            shaderProgram.Uniform("ambientLightColor", new Vector4(.3f, .3f, .1f, 1f));
+            shaderProgram.Uniform("ambientLightColor", new Vector4(.15f, .15f, .15f, 1f));
             shaderProgram.Uniform("materialColor", new Vector4(.7f, .7f, .7f, 1f));
             shaderProgram.Uniform("camera", camera.CalcLocalToWorldColumnMajorMatrix());
             shaderProgram.Uniform("cameraPosition", cameraPosition);
