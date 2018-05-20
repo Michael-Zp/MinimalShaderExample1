@@ -32,7 +32,7 @@ namespace Example
         {
             var deltaTime = time - lastUpdate;
             lastUpdate = time;
-            if (ReferenceEquals(null, OnParticleCreate)) throw new InvalidOperationException("No OnParticleCreate handler specified!");
+            if (OnParticleCreate is null) throw new InvalidOperationException("No OnParticleCreate handler specified!");
             var delete = new List<LinkedListNode<PARTICLE>>();
             for (var i = particles.First; i != particles.Last; i = i.Next)
             {

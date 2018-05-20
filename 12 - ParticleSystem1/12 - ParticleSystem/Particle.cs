@@ -4,10 +4,10 @@ namespace Example
 {
     public class Particle : IParticle
     {
-        public Particle(float creationTime)
+        public Particle(float creationTime, float lifeTime = float.PositiveInfinity)
         {
             CreationTime = creationTime;
-            LifeTime = float.PositiveInfinity;
+            LifeTime = lifeTime;
         }
 
         public void Update(float deltaTime)

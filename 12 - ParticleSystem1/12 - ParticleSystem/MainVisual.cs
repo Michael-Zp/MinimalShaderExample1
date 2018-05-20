@@ -14,12 +14,14 @@ namespace Example
 
             visualSmoke = new VisualSmoke(Vector3.Zero, new Vector3(.2f, 0, 0), renderState, contentLoader);
             visualWaterfall = new VisualWaterfall(new Vector3(-.5f, 1, -.5f), renderState, contentLoader);
+            visualExplosion = new VisualExplosion(new Vector3(0f, 1, 0f), renderState, contentLoader);
         }
 
         public void Update(float time)
         {
             visualSmoke.Update(time);
             visualWaterfall.Update(time);
+            visualExplosion.Update(time);
         }
 
         public void Render(Transformation3D camera)
@@ -30,10 +32,12 @@ namespace Example
             plane.Draw(cam);
             visualSmoke.Render(cam);
             visualWaterfall.Render(cam);
+            visualExplosion.Render(cam);
         }
 
         private VisualPlane plane;
         private readonly VisualSmoke visualSmoke;
         private readonly VisualWaterfall visualWaterfall;
+        private readonly VisualExplosion visualExplosion;
     }
 }

@@ -62,6 +62,7 @@
     <Compile Include="ParticleSystemExample.cs" />
     <Compile Include="VisualPlane.cs" />
     <Compile Include="VisualSmoke.cs" />
+    <Compile Include="VisualExplosion.cs" />
     <Compile Include="VisualWaterfall.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +89,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Content\explosion.frag" />
+    <EmbeddedResource Include="Content\explosion.vert" />
     <None Include="readme.md" />
     <EmbeddedResource Include="Content\particle.frag" />
     <EmbeddedResource Include="Content\plane.frag" />
