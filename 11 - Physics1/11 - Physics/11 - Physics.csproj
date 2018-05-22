@@ -94,32 +94,6 @@
       <Version>3.0.0</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\12 - ParticleSystem1\Zenseless.Base\Zenseless.Base.csproj">
-      <Project>{b5332c5c-f83c-42be-a48b-9987c1996ca6}</Project>
-      <Name>Zenseless.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\12 - ParticleSystem1\Zenseless.ContentPipeline\Zenseless.ContentPipeline.csproj">
-      <Project>{8f0a2c4a-c3af-4dc7-8ee9-b270e0953879}</Project>
-      <Name>Zenseless.ContentPipeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\12 - ParticleSystem1\Zenseless.Geometry\Zenseless.Geometry.csproj">
-      <Project>{bdcc87a5-ff6b-4b52-aada-9f771b7338be}</Project>
-      <Name>Zenseless.Geometry</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\12 - ParticleSystem1\Zenseless.HLGL\Zenseless.HLGL.csproj">
-      <Project>{278b8c6b-66cf-4f81-81f5-d519db871f17}</Project>
-      <Name>Zenseless.HLGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\12 - ParticleSystem1\Zenseless.OpenGL\Zenseless.OpenGL.csproj">
-      <Project>{22bb1cdd-ef6c-44c1-afc2-25f334f16cfe}</Project>
-      <Name>Zenseless.OpenGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\12 - ParticleSystem1\Zenseless.Sound\Zenseless.Sound.csproj">
-      <Project>{8cb2d2c3-1923-432c-9087-58a31269a784}</Project>
-      <Name>Zenseless.Sound</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

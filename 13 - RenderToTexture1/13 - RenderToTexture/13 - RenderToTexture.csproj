@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F59E9E5-5DF2-4035-8DCB-3E2471590882}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Example</RootNamespace>
+    <AssemblyName>13 - RenderToTexture</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyConfig.cs" />
+    <Compile Include="DeferedVisual.cs" />
+    <Compile Include="MainVisual.cs" />
+    <Compile Include="RenderToTextureExample.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\BadTV.glsl" />
+    <EmbeddedResource Include="Content\Sharpener.glsl" />
+    <EmbeddedResource Include="Content\Blur.glsl" />
+    <EmbeddedResource Include="Content\BlurGausPass1.glsl" />
+    <EmbeddedResource Include="Content\BlurGausPass2.glsl" />
+    <EmbeddedResource Include="Content\BloomGausPass1.glsl" />
+    <EmbeddedResource Include="Content\BloomGausPass2.glsl" />
+    <EmbeddedResource Include="Content\deferedData.frag" />
+    <EmbeddedResource Include="Content\defered.frag" />
+    <None Include="readme.md" />
+    <EmbeddedResource Include="Content\ChromaticAberration.glsl" />
+    <EmbeddedResource Include="Content\convolution.glsl" />
+    <EmbeddedResource Include="Content\EdgeDetect.glsl" />
+    <EmbeddedResource Include="Content\lambert.frag" />
+    <EmbeddedResource Include="Content\Ripple.glsl" />
+    <EmbeddedResource Include="Content\Sepia.glsl" />
+    <EmbeddedResource Include="Content\Swirl.glsl" />
+    <EmbeddedResource Include="Content\lambert.vert" />
+    <EmbeddedResource Include="Content\Vignetting.glsl" />
+    <EmbeddedResource Include="Content\Grayscale.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="OpenTK">
+      <Version>3.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ZenselessSourceAppEmpty2\Zenseless.Base\Zenseless.Base.csproj">
+      <Project>{57f3e61f-0c02-4fb2-bc7d-8198f5bf0109}</Project>
+      <Name>Zenseless.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ZenselessSourceAppEmpty2\Zenseless.ContentPipeline\Zenseless.ContentPipeline.csproj">
+      <Project>{3f66b2f1-e64e-4ded-80af-8909ee95995a}</Project>
+      <Name>Zenseless.ContentPipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ZenselessSourceAppEmpty2\Zenseless.Geometry\Zenseless.Geometry.csproj">
+      <Project>{a1650713-3819-4d51-9dd6-b95292219132}</Project>
+      <Name>Zenseless.Geometry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ZenselessSourceAppEmpty2\Zenseless.HLGL\Zenseless.HLGL.csproj">
+      <Project>{c59fcd11-377f-48a7-82be-432fff72d2f4}</Project>
+      <Name>Zenseless.HLGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ZenselessSourceAppEmpty2\Zenseless.OpenGL\Zenseless.OpenGL.csproj">
+      <Project>{dc868247-9c35-46ab-96b9-cb47c558abbe}</Project>
+      <Name>Zenseless.OpenGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ZenselessSourceAppEmpty2\Zenseless.Sound\Zenseless.Sound.csproj">
+      <Project>{8a16b8cb-3d75-4888-b80e-341d494d88e0}</Project>
+      <Name>Zenseless.Sound</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
